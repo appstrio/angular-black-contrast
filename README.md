@@ -1,4 +1,5 @@
-# aioBlackContrast
+# angular-black-contrast
+> Check if the best contrast for an image is black (or white)
 
 ## Getting Started
 

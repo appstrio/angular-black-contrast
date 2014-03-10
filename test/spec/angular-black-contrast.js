@@ -4,7 +4,7 @@ describe('Module: aioBlackContrast', function() {
   var scope, $sandbox, $compile, $timeout;
 
   // load the controller's module
-  beforeEach(module('pgilad.aioBlackContrast'));
+  beforeEach(module('aioBlackContrast'));
 
   beforeEach(inject(function($injector, $rootScope, _$compile_, _$timeout_) {
     scope = $rootScope;
