@@ -5,8 +5,8 @@
  *    by Gilad Peleg
  *    MIT License
  */
-angular.module('aio.image-tools.black-contrast', []);
-angular.module('aio.image-tools.black-contrast').factory('aioBlackContrast', ['$q', '$rootScope',
+angular.module('aio.image.black-contrast', []);
+angular.module('aio.image.black-contrast').factory('aioBlackContrast', ['$q', '$rootScope',
   function($q, $rootScope) {
     'use strict';
 
