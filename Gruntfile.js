@@ -73,7 +73,7 @@ module.exports = function(grunt) {
       },
       test: {
         files: '<%= jshint.test.src %>',
-        tasks: ['jshint:test', 'qunit']
+        tasks: ['jshint:test', 'karma:unit']
       }
     },
     connect: {
@@ -173,7 +173,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('test', [
     'jshint',
-    'karma:unit'
+    'karma:server'
   ]);
 
   grunt.registerTask('build', [

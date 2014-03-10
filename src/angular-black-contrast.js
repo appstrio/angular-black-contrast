@@ -111,6 +111,7 @@ angular.module('aio.image.black-contrast').factory('aioBlackContrast', ['$q', '$
         // Draw original image in second canvas
         canvasCopy.width = img.width;
         canvasCopy.height = img.height;
+
         ctxCopy.drawImage(img, 0, 0);
 
         var imageData = ctxCopy.getImageData(0, 0, img.width, img.height);
@@ -137,7 +138,7 @@ angular.module('aio.image.black-contrast').factory('aioBlackContrast', ['$q', '$
 
     return {
       contrastFromUrl: contrastFromUrl,
-      contrastFromImageData: contrastFromImageData,
+      contrastFromImageData: contrastFromImageData
     };
   }
 ]);
