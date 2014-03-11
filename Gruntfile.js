@@ -44,10 +44,6 @@ module.exports = function(grunt) {
         files: '<%= jshint.gruntfile.src %>',
         tasks: ['jshint:gruntfile']
       },
-      less: {
-        files: ['<%= yo.src %>/{,*/}*.less'],
-        tasks: ['less:dist']
-      },
       app: {
         files: [
           '<%= yo.src %>/{,*/}*.html',
@@ -61,17 +57,6 @@ module.exports = function(grunt) {
       test: {
         files: '<%= jshint.test.src %>',
         tasks: ['jshint:test', 'karma:unit']
-      }
-    },
-    less: {
-      options: {
-        // dumpLineNumbers: 'all',
-        paths: ['<%= yo.src %>']
-      },
-      dist: {
-        files: {
-          '<%= yo.src %>/<%= yo.name %>.css': '<%= yo.src %>/<%= yo.name %>.less'
-        }
       }
     },
     jshint: {
