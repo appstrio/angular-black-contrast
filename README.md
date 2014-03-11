@@ -39,7 +39,7 @@ aioBlackContrast.contrastFromUrl('http://www.yourdomain.com/someimage.jpg')
 
 **aioBlackContrast** has 1 public API:
 
-```jsdoc
+```js
 /**
   * contrastFromUrl
   *

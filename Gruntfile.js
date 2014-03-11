@@ -122,21 +122,6 @@ module.exports = function(grunt) {
         src: ['<%= yo.src %>/<%= pkg.name %>.js'],
         dest: '<%= yo.dist %>/<%= pkg.name %>.js'
       }
-      // dist: {
-      //   files: {
-      //     '/.js': '/.js'
-      //   }
-      // }
-    },
-    concat: {
-      options: {
-        banner: '<%= meta.banner %>',
-        stripBanners: true
-      },
-      dist: {
-        src: ['<%= yo.src %>/<%= pkg.name %>.js'],
-        dest: '<%= yo.dist %>/<%= pkg.name %>.js'
-      }
     },
     uglify: {
       options: {
