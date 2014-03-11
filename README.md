@@ -48,8 +48,7 @@ aioBlackContrast.contrastFromUrl('http://www.yourdomain.com/someimage.jpg')
 ```
 
 ## License
-
-MIT @2014 by Gilad Peleg
+MIT Copyright (c) 2014 Appstr.io
 
 [min]: https://raw.github.com/appstrio/angular-black-contrast/master/dist/angular-black-contrast.min.js
 [max]: https://raw.github.com/appstrio/angular-black-contrast/master/dist/angular-black-contrast.js

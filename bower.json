@@ -1,7 +1,6 @@
 {
     "name": "angular-black-contrast",
     "version": "0.0.1",
-    "private": true,
     "main": ["dist/angular-black-contrast.min.js"],
     "dependencies": {
         "angular": ">=1.0.8"
