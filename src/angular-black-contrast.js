@@ -93,6 +93,20 @@ angular.module('aio.image.black-contrast').factory('aioBlackContrast', ['$q', '$
       return _blackContrast(imageRgb);
     };
 
+    var _getImageDataFromImg = function(img) {
+      var canvasCopy = document.createElement('canvas'),
+        ctxCopy = canvasCopy.getContext('2d');
+
+      // Draw original image in second canvas
+      canvasCopy.width = img.width;
+      canvasCopy.height = img.height;
+
+      ctxCopy.drawImage(img, 0, 0);
+
+      var imageData = ctxCopy.getImageData(0, 0, img.width, img.height);
+      return imageData;
+    };
+
     var contrastFromUrl = function(imageUrl, isCrossDomain) {
       var deferred = $q.defer();
       var img;
@@ -105,17 +119,8 @@ angular.module('aio.image.black-contrast').factory('aioBlackContrast', ['$q', '$
 
       //img load event
       img.onload = function() {
-        var canvasCopy = document.createElement('canvas'),
-          ctxCopy = canvasCopy.getContext('2d');
-
-        // Draw original image in second canvas
-        canvasCopy.width = img.width;
-        canvasCopy.height = img.height;
-
-        ctxCopy.drawImage(img, 0, 0);
-
-        var imageData = ctxCopy.getImageData(0, 0, img.width, img.height);
-        var shouldUseBlack = contrastFromImageData(imageData, img.width, img.height);
+        var imageData = _getImageDataFromImg(img);
+        var shouldUseBlack = contrastFromImageData(imageData, imageData.width, imageData.height);
 
         $rootScope.$apply(function() {
           deferred.resolve(shouldUseBlack);
