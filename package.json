@@ -1,46 +1,44 @@
 {
-  "name": "angular-black-contrast",
-  "version": "0.0.3",
-  "description": "Check if the best contrast for an image is black (or white)",
-  "keywords": [
-    "angular",
-    "componenet",
-    "image",
-    "contrast",
-    "bower"
-  ],
-  "homepage": "https://github.com/appstrio/angular-black-contrast",
-  "bugs": "https://github.com/appstrio/angular-black-contrast/issues",
-  "author": {
-    "name": "Gilad Peleg",
-    "email": "giladp007@gmail.com",
-    "url": "https://github.com/pgilad"
-  },
-  "scripts": {
-    "test": "grunt test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/appstrio/angular-black-contrast.git"
-  },
-  "licenses": [
-    {
-      "type": "MIT"
+    "name": "angular-black-contrast",
+    "version": "0.0.3",
+    "description": "Check if the best contrast for an image is black (or white)",
+    "keywords": [
+        "angular",
+        "componenet",
+        "image",
+        "contrast",
+        "bower"
+    ],
+    "homepage": "https://github.com/appstrio/angular-black-contrast",
+    "bugs": "https://github.com/appstrio/angular-black-contrast/issues",
+    "author": {
+        "name": "Gilad Peleg",
+        "email": "giladp007@gmail.com",
+        "url": "https://github.com/pgilad"
+    },
+    "scripts": {
+        "test": "grunt test"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/appstrio/angular-black-contrast.git"
+    },
+    "licenses": [{
+        "type": "MIT"
+    }],
+    "peerDependencies": {
+        "grunt": "^0.4.3"
+    },
+    "devDependencies": {
+        "grunt-contrib-clean": "^0.5.0",
+        "grunt-contrib-jshint": "^0.8.0",
+        "grunt-contrib-uglify": "^0.4.0",
+        "grunt-contrib-watch": "^0.5.3",
+        "grunt-karma": "~0.7.2",
+        "grunt-ngmin": "0.0.3",
+        "karma": "^0.12.0",
+        "karma-jasmine": "^0.1.5",
+        "karma-phantomjs-launcher": "^0.1.2",
+        "matchdep": "^0.3.0"
     }
-  ],
-  "peerDependencies": {
-    "grunt": "^0.4.3"
-  },
-  "devDependencies": {
-    "grunt-contrib-clean": "^0.5.0",
-    "grunt-contrib-jshint": "^0.8.0",
-    "grunt-contrib-uglify": "^0.4.0",
-    "grunt-contrib-watch": "^0.5.3",
-    "grunt-karma": "~0.7.2",
-    "grunt-ngmin": "0.0.3",
-    "karma": "0.11.14",
-    "karma-jasmine": "^0.1.5",
-    "karma-phantomjs-launcher": "^0.1.2",
-    "matchdep": "^0.3.0"
-  }
 }
