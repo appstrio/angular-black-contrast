@@ -1,6 +1,7 @@
 # angular-black-contrast
 > Check if the best contrast for an image is black (or white)
 
+[![Build Status](https://travis-ci.org/appstrio/angular-black-contrast.png?branch=master)](https://travis-ci.org/appstrio/angular-black-contrast)
 [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 
 ## Getting Started
