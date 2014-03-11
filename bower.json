@@ -2,6 +2,14 @@
     "name": "angular-black-contrast",
     "version": "0.0.2",
     "main": ["dist/angular-black-contrast.min.js"],
+    "ignore": [
+        "*.md",
+        ".travis.yml",
+        "Gruntfile.js",
+        "karma.conf.js",
+        "package.json",
+        "test/"
+    ],
     "dependencies": {
         "angular": ">=1.0.8"
     },
