@@ -10,14 +10,6 @@ module.exports = function(grunt) {
     dist: 'dist'
   };
 
-  // Livereload setup
-  var lrSnippet = require('connect-livereload')({
-    port: yoConfig.livereload
-  });
-  var mountFolder = function(connect, dir) {
-    return connect.static(require('path').resolve(dir));
-  };
-
   // Load all grunt tasks
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
@@ -128,7 +120,7 @@ module.exports = function(grunt) {
         banner: '<%= meta.banner %>'
       },
       dist: {
-        src: '<%= concat.dist.dest %>',
+        src: '<%= yo.src %>/*.js',
         dest: '<%= yo.dist %>/<%= pkg.name %>.min.js'
       }
     }
@@ -136,12 +128,11 @@ module.exports = function(grunt) {
 
   grunt.registerTask('test', [
     'jshint',
-    'karma:server'
+    'karma:unit'
   ]);
 
   grunt.registerTask('build', [
     'clean:dist',
-    'less:dist',
     'ngmin:dist',
     'uglify:dist'
   ]);

@@ -17,7 +17,7 @@
         "url": "https://github.com/pgilad"
     },
     "scripts": {
-        "test": "./node_modules/.bin/karma start --single-run --browsers PhantomJS"
+        "test": "grunt test"
     },
     "repository": {
         "type": "git",
@@ -30,14 +30,15 @@
         "grunt": "^0.4.3"
     },
     "devDependencies": {
-        "grunt-contrib-clean": "~0.5.0",
+        "grunt-contrib-clean": "^0.5.0",
         "grunt-contrib-jshint": "^0.8.0",
         "grunt-contrib-uglify": "^0.4.0",
-        "grunt-contrib-watch": "~0.5.3",
-        "grunt-karma": "^0.7.2",
+        "grunt-contrib-watch": "^0.5.3",
+        "grunt-karma": "~0.7.2",
         "grunt-ngmin": "0.0.3",
         "karma": "0.11.14",
-        "karma-jasmine": "^0.2.1",
+        "karma-jasmine": "^0.1.5",
+        "karma-phantomjs-launcher": "^0.1.2",
         "matchdep": "^0.3.0"
     }
 }
