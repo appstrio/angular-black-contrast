@@ -13,11 +13,43 @@ In your web page:
 ```
 
 ## Documentation
-_(Coming soon)_
 
-## Examples
-_(Coming soon)_
+Inject the module in your Angular app like so:
+```js
+angular.module('yourAngularApp', ['aio.image.black-contrast']);
+```
+
+Then when you need to use the Black Contrast tool you inject it into your controller/factory like so:
+```js
+myApp.factory('yourCoolFactory', ['aioBlackContrast', function(){
+}])
+```
+
+## API & Usage
+
+You can check whether an image url (or base64) best contrast is black or white using the following:
+```js
+aioBlackContrast.contrastFromUrl('http://www.yourdomain.com/someimage.jpg')
+  .then(function(shouldUseBlack){
+    // -> True/False
+  })
+```
+
+**aioBlackContrast** has 1 public API:
+
+```jsdoc
+/**
+  * contrastFromUrl
+  *
+  * @param {String} imageUrl image url or base64 to test
+  * @param {Booelan} [isCrossDomain] should cross domain requests be used
+  * @return {@promise}
+  **/
+```
+
+## License
+
+MIT @2014 by Gilad Peleg
 
 [min]: https://raw.github.com/appstrio/angular-black-contrast/master/dist/angular-black-contrast.min.js
 [max]: https://raw.github.com/appstrio/angular-black-contrast/master/dist/angular-black-contrast.js
-

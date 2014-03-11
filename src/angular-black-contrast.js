@@ -87,7 +87,6 @@ angular.module('aio.image.black-contrast').factory('aioBlackContrast', ['$q', '$
       return data;
     };
 
-    //use imagedata to determine if image best contrast is black (or white)
     var contrastFromImageData = function(imageData, width, height) {
       var imageRgb = _parseImage(imageData.data, width, height);
       return _blackContrast(imageRgb);
@@ -107,6 +106,13 @@ angular.module('aio.image.black-contrast').factory('aioBlackContrast', ['$q', '$
       return imageData;
     };
 
+    /**
+     * contrastFromUrl
+     *
+     * @param {String} imageUrl image url or base64 to test
+     * @param {Booelan} [isCrossDomain] should cross domain requests be used
+     * @return
+     */
     var contrastFromUrl = function(imageUrl, isCrossDomain) {
       var deferred = $q.defer();
       var img;
