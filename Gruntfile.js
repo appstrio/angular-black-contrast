@@ -34,11 +34,6 @@ module.exports = function(grunt) {
         ' * @license MIT License, http://www.opensource.org/licenses/MIT\n' +
         ' */\n'
     },
-    open: {
-      server: {
-        path: 'http://localhost:<%= connect.options.port %>'
-      }
-    },
     clean: {
       dist: {
         files: [{
@@ -74,23 +69,6 @@ module.exports = function(grunt) {
       test: {
         files: '<%= jshint.test.src %>',
         tasks: ['jshint:test', 'karma:unit']
-      }
-    },
-    connect: {
-      options: {
-        port: 9000,
-        hostname: '0.0.0.0' // Change this to '0.0.0.0' to access the server from outside.
-      },
-      livereload: {
-        options: {
-          middleware: function(connect) {
-            return [
-              lrSnippet,
-              mountFolder(connect, '.tmp'),
-              mountFolder(connect, yoConfig.src)
-            ];
-          }
-        }
       }
     },
     less: {
