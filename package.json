@@ -41,9 +41,9 @@
         "grunt-karma": "^0.6.2",
         "grunt-ngmin": "0.0.3",
         "grunt-open": "~0.2.2",
-        "matchdep": "^0.3.0",
-        "requirejs": "^2.1.11",
+        "karma": "^0.10.9",
         "karma-jasmine": "^0.1.5",
-        "karma": "^0.10.9"
+        "matchdep": "^0.3.0",
+        "requirejs": "^2.1.11"
     }
 }
